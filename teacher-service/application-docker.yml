@@ -1,0 +1,2 @@
+eureka:
+  client.serviceUrl.defaultZone: ${EUREKA_SERVER_URI:http://eureka-server:7311/eureka}

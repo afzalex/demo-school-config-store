@@ -1,3 +1,25 @@
-application:
-  info: test application
-  title: Teacher application
+spring:
+  application:
+    name: teacher-service
+
+server:
+  port: ${PORT:7331}
+
+eureka:
+  client.serviceUrl.defaultZone: ${EUREKA_SERVER_URI:http://localhost:7311/eureka}
+  instance:
+    hostname: ${APPLICATION_HOST_NAME:localhost}
+    preferIpAddress: false
+
+management:
+  info.env.enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info
+
+info:
+  app:
+    name: Teacher Service
+    Description: Teacher Service
+    version: 1.0.1
