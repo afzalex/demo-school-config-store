@@ -3,7 +3,7 @@ spring:
     name: teacher-service
 
 server:
-  port: ${PORT:8331}
+  port: ${PORT:8332}
 
 eureka:
   client.serviceUrl.defaultZone: ${EUREKA_SERVER_URI:http://localhost:8311/eureka}
@@ -20,6 +20,6 @@ management:
 
 info:
   app:
-    name: Teacher Service
-    Description: Teacher Service
-    version: 1.0.1
+    name: School Service
+    Description: School Service
+    version: 1.0.0
