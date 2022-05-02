@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ${demo.appname.eureka}
+
+server:
+  port: ${PORT:8311}
+
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enableSelfPreservation: false
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+
+info:
+  app:
+    name: Eureka Server
+    Description: Eureka Server
+    version: 1.0.0

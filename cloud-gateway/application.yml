@@ -1,0 +1,33 @@
+server:
+  port: ${PORT:8330}
+
+info:
+  app:
+    name: Cloud Gateway
+    Description: Cloud Gateway
+    version: 1.0.0
+
+logging:
+  level:
+    reactor:
+      netty: INFO
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: school-service
+          uri: lb://school-service
+          predicates:
+            - Path=/school/**
+
+        - id: teacher-service
+          uri: lb://teacher-service
+          predicates:
+            - Path=/teacher/**

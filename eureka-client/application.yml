@@ -1,18 +1,5 @@
-spring:
-  application:
-    name: ${demo.appname.school}
-
-server:
-  port: ${PORT:8332}
-
 eureka:
   client.serviceUrl.defaultZone: ${EUREKA_SERVER_URI:http://localhost:8311/eureka}
   instance:
     hostname: ${APPLICATION_HOST_NAME:localhost}
     preferIpAddress: false
-
-info:
-  app:
-    name: School Service
-    Description: School Service
-    version: 1.0.0

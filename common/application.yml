@@ -1,3 +1,14 @@
-demo-school:
-  message: I am a message from demo school
-  message2: I am another message
+management:
+  info.env.enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info
+
+demo:
+  appname:
+    config: config-server
+    eureka: eureka-server
+    gateway: cloud-gateway
+    school: school-service
+    teacher: teacher-service
