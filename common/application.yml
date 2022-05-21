@@ -12,3 +12,4 @@ demo:
     gateway: cloud-gateway
     school: school-service
     teacher: teacher-service
+    payment: payment-service

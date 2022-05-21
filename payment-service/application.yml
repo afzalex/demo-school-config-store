@@ -1,0 +1,24 @@
+spring:
+  application.name: payment-service
+  data.mongodb:
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:8323}
+      username: root
+      password: password123
+      database: demo-school
+      authentication-database: admin
+
+server:
+  port: ${PORT:8333}
+
+eureka:
+  client.serviceUrl.defaultZone: ${EUREKA_SERVER_URI:http://localhost:8311/eureka}
+  instance:
+    hostname: ${APPLICATION_HOST_NAME:localhost}
+    preferIpAddress: false
+
+info:
+  app:
+    name: Payment Service
+    Description: Payment Service
+    version: 1.0.0
