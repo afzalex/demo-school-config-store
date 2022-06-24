@@ -16,3 +16,6 @@ info:
     name: School Service
     Description: School Service
     version: 1.0.0
+
+school:
+  pingMessage: This is a test ping message
